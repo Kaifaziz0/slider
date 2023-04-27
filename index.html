@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>My Work Slider</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+	<style type="text/css">
+		.slider-pou {
+			width: 80%;
+			margin: 0 auto;
+			padding: 20px;
+		}
+		.slider-pou img {
+			width: 100%;
+			height: 300px;
+			object-fit: cover;
+		}
+	</style>
+</head>
+<body>
+	<div class="slider-pou">
+		<div><img src="https://plus.unsplash.com/premium_photo-1664880019462-b69c41f2dad4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D"></div>
+		<div><img src="https://plus.unsplash.com/premium_photo-1676409608965-665e89ba22a4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHw%3D"></div>
+		<div><img src="https://plus.unsplash.com/premium_photo-1664053453717-6fbe70ea92ed?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHw%3D"></div>
+		<div><img src="https://plus.unsplash.com/premium_photo-1681412205199-9fe2b408ed55?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3fHx8ZW58MHx8fHw%3D&"></div>
+		<div><img src="https://images.unsplash.com/photo-1682344329149-1fce68a8b087?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxM3x8fGVufDB8fHx8&"></div>
+	</div>
+	
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.slider-pou').slick({
+				autoplay: true,
+				autoplaySpeed: 2000,
+				arrows: false,
+				dots: true,
+				infinite: true,
+				speed: 500,
+				slidesToShow: 3,
+				slidesToScroll: 1,
+				responsive: [
+				    {
+				      breakpoint: 1024,
+				      settings: {
+				        slidesToShow: 2,
+				        slidesToScroll: 1,
+				        infinite: true,
+				        dots: true
+				      }
+				    },
+				    {
+				      breakpoint: 600,
+				      settings: {
+				        slidesToShow: 1,
+				        slidesToScroll: 1
+				      }
+				    },
+				    {
+				      breakpoint: 480,
+				      settings: {
+				        slidesToShow: 1,
+				        slidesToScroll: 1
+				      }
+				    }
+			  	]
+			});
+		});
+	</script>
+</body>
+</html>
